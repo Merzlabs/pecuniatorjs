@@ -1,0 +1,24 @@
+{
+  "name": "pecuniatorjs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Merzlabs/pecuniatorjs.git"
+  },
+  "keywords": [
+    "psd2",
+    "xs2a"
+  ],
+  "author": "Merzlabs",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Merzlabs/pecuniatorjs/issues"
+  },
+  "homepage": "https://github.com/Merzlabs/pecuniatorjs#readme"
+}
