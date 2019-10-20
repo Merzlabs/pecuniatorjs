@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "env": "source secrets/sandbox.env"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/Merzlabs/pecuniatorjs/issues"
   },
-  "homepage": "https://github.com/Merzlabs/pecuniatorjs#readme"
+  "homepage": "https://github.com/Merzlabs/pecuniatorjs#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "uuid": "^3.3.3"
+  }
 }
