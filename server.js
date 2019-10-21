@@ -21,13 +21,15 @@ const consentValidUntil = yyyy + '-' + mm + '-' + dd;
 
 const data = JSON.stringify({
     "access": {
-        "balances": [{
+        "balances": [
+          {
             "iban": process.env.PT_IBAN
-        }
+          }
         ],
-        "transactions": [{
+        "transactions": [
+          {
             "iban": process.env.PT_IBAN
-        }
+          }
         ]
     },
     "recurringIndicator": true,
@@ -42,14 +44,18 @@ const options = {
     path: `${process.env.PT_PATH}/${process.env.PT_VERS}/consents`,
     method: 'POST',
     key: fs.readFileSync('secrets/cert/own/priv.key'),
-    cert: fs.readFileSync('secrets/cert/own/zertifikat_pem.crt'),
+    cert: fs.readFileSync('secrets/cert/own/zertifikat_withintermediate.pem'),
     requestCert: true,
-    rejectUnauthorized: false,
+    rejectUnauthorized: true,
+    ca: [
+        fs.readFileSync('secrets/cert/root/ca.pem'),
+        fs.readFileSync('secrets/cert/root/root.pem')
+    ],
     headers: {
         'Content-Type': 'application/json',
         'TPP-Redirect-Preferred': true,
         'TPP-Redirect-URI': process.env.PT_TPPREDIRECTURI,
-        'X-Request_ID': requestID
+        'X-Request-ID': requestID
     }
 }
 
