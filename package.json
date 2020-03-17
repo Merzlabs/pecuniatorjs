@@ -24,6 +24,6 @@
   "homepage": "https://github.com/Merzlabs/pecuniatorjs#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "uuid": "^3.3.3"
+    "uuid": "^7.0.2"
   }
 }
